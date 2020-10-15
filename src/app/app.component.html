@@ -1,0 +1,17 @@
+
+<select (change)="setvalue($event)">
+  <option value="">--select--</option>
+  <option value="one">one</option>
+  <option value="two">two</option>
+  <option value="three">three</option>
+  <option value="another">another</option>
+</select>
+
+<div [ngSwitch]="choose">
+<h3 *ngSwitchCase="'one'">first</h3>
+<h3 *ngSwitchCase="'two'">second</h3>
+<h3 *ngSwitchCase="'three'">third</h3>
+<h3 *ngSwitchDefault>Default</h3>
+</div> 
+
+<router-outlet></router-outlet>
