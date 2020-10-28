@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myangular10app';
-  public choose='';
-  setvalue(drp:any)
-  {
-    this.choose=drp.target.value;
-  }
 }
