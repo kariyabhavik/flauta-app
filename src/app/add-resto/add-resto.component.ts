@@ -14,12 +14,16 @@ export class AddRestoComponent implements OnInit {
     address: new FormControl('')
   })
   constructor(private resto:RestoService) { }
-
+alert:boolean=false
   ngOnInit(): void {
   }
   collectResto(){
     this.resto.saveResto(this.addResto.value).subscribe((result)=>{
-      console.warn(result)
+     this.alert=true
     })
+    this.addResto.reset({})
+  }
+  closeAlert(){
+    this.alert=false  
   }
 }
